@@ -1,13 +1,13 @@
 {
-  "name": "2b_forum",
+  "name": "HackNTU landing page",
   "description": "",
   "main": "",
   "authors": [
-    "type0 <happy@rma.com>"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/xtype0x/2b_forum",
+  "homepage": "https://github.com/HackYolo/landing2016",
   "moduleType": [],
+  "directory" : "public/components",
   "ignore": [
     "**/.*",
     "node_modules",
