@@ -1,0 +1,24 @@
+{
+  "name": "2b_forum",
+  "description": "",
+  "main": "",
+  "authors": [
+    "type0 <happy@rma.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/xtype0x/2b_forum",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "angular": "angularjs#~1.4.8",
+    "alertify.js": "~0.3.11"
+  }
+}
