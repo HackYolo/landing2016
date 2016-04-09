@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="admin-user">
+  <head>
+    <meta charset="utf-8">
+    <title>Admin - HackNTU</title>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js"></script>
+    <script src="/javascript/ng-admin-user.js"></script>
+    
+  </head>
+
+  <body>
+    <div ng-controller="adminUsersCtrl">
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>&nbsp;</th>
+            <th>Name</th>         
+            <th>email</th>
+            <th>SignUp Date</th>
+            <th>&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="user in userlist">
+            <td><strong>{{ user.isAdmin ? "+" : "-" }}</strong></td>
+            <td>{{user.fb.displayName}}</td>
+            <td>{{ user.fb.email }}</td>
+            <td>{{user.createdAt |date:'yyyy-MM-dd HH:mm:ss' }}</td>
+            
+            <td>
+              <button class="btn btn-warning" ng-click="mkAdmin( user )" >{{ user.isAdmin ? 'Remove Admin' : 'Become Admin' }}</button>
+              <button class="btn btn-danger" ng-click="remove( user )">Remove</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </body>
+</html>
+
+

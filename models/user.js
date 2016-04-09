@@ -9,7 +9,8 @@ var UserSchema = new mongoose.Schema({
 		access_token: String,
 		displayName: String,
 		email: String
-	}
+	},
+  isAdmin: Boolean
 });
 UserSchema.plugin(timestamp);
 

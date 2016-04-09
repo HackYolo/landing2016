@@ -36,6 +36,7 @@ module.exports = function(passport) {
           newUser.fb.displayName  =   profile.displayName;
           if( profile.emails && profile.emails.length > 0)
             newUser.fb.email        =   profile.emails[0].value; // facebook can return multiple emails so we'll take the first
+          newUser.isAdmin = false;
 
           // save our user to the database
           newUser.save(function(err) {

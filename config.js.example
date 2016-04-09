@@ -4,4 +4,5 @@ module.exports = {
   fb_appsecret: <APP_secret>,
 	db_url : 'mongodb://localhost/test',
 	fb_callbackUrl : 'http://localhost:3000/login/facebook/callback',
+  fb_rootAdmin: <root_admin_fbid>,
 }

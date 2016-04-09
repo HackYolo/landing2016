@@ -1,11 +1,20 @@
 var express = require('express');
 var router = express.Router();
+var config = require('../config');
+var User = require('../models/user.js');
+var mongojs = require('mongojs');
 
 var isAuthenticated = function (req, res, next) {
 	if (req.isAuthenticated())
 		return next();
 	res.redirect('/');
 }
+
+var canAccessAdmin = function( req, res, next ){
+  if( req.user.fb.id == config.fb_rootAdmin || req.user.isAdmin )
+    return next();
+  res.send(403, 'NONONO you are not allowed to play here');
+};
 
 module.exports = function(passport){
 
@@ -15,6 +24,11 @@ module.exports = function(passport){
 		res.render('index', { user: req.user, message: req.flash('message') });
 	});
 
+  router.get('/admin', canAccessAdmin, function(req, res){
+    res.render('admin', { user: req.user });
+  });
+
+  
 	/* Handle Login POST */
 	router.post('/login', passport.authenticate('login', {
 		successRedirect: '/profile',
