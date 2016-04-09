@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var validate = require('mongoose-validator').validate;
+var timestamp = require('mongoose-timestamp');
   //, passportLocalMongoose = require('passport-local-mongoose');
 
 var UserSchema = new mongoose.Schema({
@@ -8,9 +9,9 @@ var UserSchema = new mongoose.Schema({
 		access_token: String,
 		displayName: String,
 		email: String
-	},
-  time: Date,
+	}
 });
+UserSchema.plugin(timestamp);
 
 //User.plugin(passportLocalMongoose);
 
