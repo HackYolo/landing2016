@@ -1,0 +1,24 @@
+{
+  "name": "HackNTU landing page",
+  "description": "",
+  "main": "",
+  "authors": [
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/HackYolo/landing2016",
+  "moduleType": [],
+  "directory" : "public/components",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "angular": "angularjs#~1.4.8",
+    "alertify.js": "~0.3.11"
+  }
+}
