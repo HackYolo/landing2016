@@ -1,8 +1,13 @@
-<html>
+<html ng-app="profile">
   <head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
 
   </head>
-  <body>
-    Hello, <%= user.fb.displayName %>.
-  </body>
-</html>
+  <body ng-controller="ProfileCtrl">
+    <div class="page-header">Hello, <%= user.fb.displayName %>.</div>
+
+
+    </body>
+  </html>

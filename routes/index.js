@@ -26,9 +26,6 @@ module.exports = function(passport){
 		res.render('profile', { user: req.user });
 	});
 
-  router.get('/signin', function(req, res){
-    res.render('signin');
-  });
 
 	/* Handle Logout */
 	router.get('/signout', function(req, res) {
