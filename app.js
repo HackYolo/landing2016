@@ -11,9 +11,9 @@ var express = require('express')
   , passport = require('passport')
   , expressSession = require('express-session')
   , initPassport = require('./passport/init')
-  , dbConfig = require('./config/db.js');
+  , config = require('./config');
 
-mongoose.connect( dbConfig.url );
+mongoose.connect( config.db_url );
 
 
 // view engine setup

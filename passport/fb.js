@@ -1,13 +1,13 @@
 var FacebookStrategy = require('passport-facebook').Strategy;
 var User = require('../models/user');
-var FBconfig = require('../config/fb');
+var config = require('../config');
 
 module.exports = function(passport) {
 
   passport.use( new FacebookStrategy({
-    clientID        : FBconfig.appID,
-    clientSecret    : FBconfig.appSecret,
-    callbackURL     : FBconfig.callbackUrl,
+    clientID        : config.fb_appid,
+    clientSecret    : config.fb_appsecret,
+    callbackURL     : config.fb_callbackUrl,
     profileFields   : ['id', 'displayName', 'emails'],
     enableProof     : true
   },
