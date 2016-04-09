@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="register">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Login</title>
+  <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/components/alertify.js/themes/alertify.core.css">
+  <link rel="stylesheet" href="/components/alertify.js/themes/alertify.default.css">
+
+  <script src="/components/jquery/dist/jquery.min.js"></script>
+  <script src="/components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/components/angular/angular.min.js"></script>
+  <script src="/components/alertify.js/lib/alertify.min.js"></script>
+  <script src="/login.js"></script>
+</head>
+<body ng-controller="login_controller">
+<%- include layout/navbar%>
+  <div class="container">
+    <h1>登入</h1>
+    <form class="form-horizontal" style="width:600px;text-align:center;">
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" ng-model="ggform.name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" ng-model="ggform.password">
+        </div>
+      </div>
+      <button class="btn btn-primary" ng-click="login()">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
